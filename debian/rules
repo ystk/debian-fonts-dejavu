@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+	
+override_dh_auto_build:
+	make full-ttf
+	sh debian/scripts/generate-udeb.sh
+
+override_dh_auto_clean:
+	$(RM) -rf tmp/ build/ udeb-generated/ udeb-build/
+	$(RM) -f debian/stamp-common-build
+	dh_auto_clean
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz -Sextreme -z9
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS

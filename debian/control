@@ -1,0 +1,158 @@
+Source: fonts-dejavu
+Section: fonts
+Priority: optional
+Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Build-Depends:
+ debhelper (>= 9~)
+Build-Depends-Indep:
+ fontforge-nox | fontforge,
+ libfont-ttf-perl (>= 0.35),
+ perl
+Standards-Version: 3.9.4
+Uploaders:
+ Davide Viti <zinosat@tiscali.it>,
+ Christian Perrier <bubulle@debian.org>
+Vcs-Git: git://anonscm.debian.org/pkg-fonts/fonts-dejavu.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/fonts-dejavu.git;a=summary
+Homepage: http://dejavu-fonts.org/
+
+Package: fonts-dejavu
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ fonts-dejavu-core,
+ fonts-dejavu-extra,
+ ${misc:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends}
+Replaces:
+ ttf-dejavu (<< 2.33+svn2514-2~)
+Breaks:
+ ttf-dejavu (<< 2.33+svn2514-2~)
+Description: metapackage to pull in fonts-dejavu-core and fonts-dejavu-extra
+ DejaVu provides an expanded version of the Vera font family aiming for
+ quality and broader Unicode coverage while retaining the original Vera
+ style. DejaVu currently works towards conformance with the Multilingual
+ European Standards (MES-1 and MES-2) for Unicode coverage. The DejaVu
+ fonts provide serif, sans and monospaced variants.
+ .
+ Use this package if you want all DejaVu variants.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: fonts-dejavu-core
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends}
+Replaces:
+ ttf-dejavu (<< 2.20-1),
+ ttf-dejavu-core (<< 2.33+svn2514-2~)
+Breaks:
+ ttf-dejavu (<< 2.20-1),
+ ttf-dejavu-core (<< 2.33+svn2514-2~)
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: Vera font family derivate with additional characters
+ DejaVu provides an expanded version of the Vera font family aiming for
+ quality and broader Unicode coverage while retaining the original Vera
+ style. DejaVu currently works towards conformance with the Multilingual
+ European Standards (MES-1 and MES-2) for Unicode coverage. The DejaVu
+ fonts provide serif, sans and monospaced variants.
+ .
+ This package only contains the sans, sans-bold, serif, serif-bold,
+ mono and mono-bold variants. For additional variants, see the
+ ttf-dejavu-extra package.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: fonts-dejavu-extra
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ fonts-dejavu-core,
+ ${misc:Depends}
+Replaces:
+ ttf-dejavu (<< 2.20-1),
+ ttf-dejavu-extra (<< 2.33+svn2514-2~)
+Breaks:
+ ttf-dejavu (<< 2.20-1),
+ ttf-dejavu-extra (<< 2.33+svn2514-2~)
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: Vera font family derivate with additional characters (extra variants)
+ DejaVu provides an expanded version of the Vera font family aiming for
+ quality and broader Unicode coverage while retaining the original Vera
+ style. DejaVu currently works towards conformance with the Multilingual
+ European Standards (MES-1 and MES-2) for Unicode coverage. The DejaVu
+ fonts provide serif, sans and monospaced variants.
+ .
+ This package includes additional variants, such as oblique, italic,
+ bold-oblique, bold-italic and the condensed forms.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: fonts-dejavu-udeb
+Package-Type: udeb
+Section: debian-installer
+Architecture: all
+Description: Vera font family derivate with additional characters
+ DejaVu provides an expanded version of the Vera font family aiming for
+ quality and broader Unicode coverage while retaining the original Vera
+ style. DejaVu currently works towards conformance with the Multilingual
+ European Standards (MES-1 and MES-2) for Unicode coverage. The DejaVu
+ fonts provide serif, sans and monospaced variants.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: fonts-dejavu-mono-udeb
+Package-Type: udeb
+Section: debian-installer
+Architecture: all
+Description: Monospace Vera font family derivate with additional characters
+ Monospace variant of the DejaVu font for the debian-installer.
+ .
+ DejaVu fonts are intended for use on low-resolution devices (mainly
+ computer screens) but can be used in printing as well.
+
+Package: ttf-dejavu
+Depends:
+ fonts-dejavu,
+ ttf-dejavu-core,
+ ttf-dejavu-extra,
+ ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Priority: extra
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.
+
+Package: ttf-dejavu-core
+Depends:
+ fonts-dejavu-core,
+ ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Priority: extra
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.
+
+Package: ttf-dejavu-extra
+Depends:
+ fonts-dejavu-extra,
+ ${misc:Depends}
+Architecture: all
+Section: oldlibs
+Priority: extra
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.

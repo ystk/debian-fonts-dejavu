@@ -1,0 +1,7 @@
+build/DejaVuSans-Bold.ttf usr/share/fonts/truetype/dejavu
+build/DejaVuSans.ttf usr/share/fonts/truetype/dejavu
+build/DejaVuSansMono-Bold.ttf usr/share/fonts/truetype/dejavu
+build/DejaVuSansMono.ttf usr/share/fonts/truetype/dejavu
+build/DejaVuSerif-Bold.ttf usr/share/fonts/truetype/dejavu
+build/DejaVuSerif.ttf usr/share/fonts/truetype/dejavu
+fontconfig/*.conf etc/fonts/conf.avail
